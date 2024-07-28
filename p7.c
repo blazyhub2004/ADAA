@@ -2,7 +2,7 @@
 #define MAX 50
 int p[MAX], w[MAX], x[MAX];
 double maxprofit;
-int n, m, i;
+int n, m, i,j;
 void greedyKnapsack(int n, int w[], int p[], int m)
 {
 double ratio[MAX];
@@ -12,7 +12,7 @@ ratio[i] = (double)p[i] / w[i];
 }
 for (i = 0; i < n - 1; i++)
 {
-for (int j = i + 1; j < n; j++)
+for (j = i + 1; j < n; j++)
 {
 if (ratio[i] < ratio[j])
 {
